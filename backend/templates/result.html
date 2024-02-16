@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="m-4 border border-success rounded">
+
+        <div class="d-flex justify-content-center mt-3"><p class="font-weight-bold text-success">{{message}}</p></div>
+       
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Date</th>
+            <th scope="col">Price</th>
+            <th scope="col">Open</th>
+            <th scope="col">High</th>
+            <th scope="col">Low</th>
+            <th scope="col">Vol</th>
+            <th scope="col">Change</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+          <tr>
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.date}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.open}}</td>
+            <td>{{item.high}}</td>
+            <td>{{item.low}}</td>
+            <td>{{item.vol}}</td>
+            <td>{{item.change}}</td>
+            
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</html>
